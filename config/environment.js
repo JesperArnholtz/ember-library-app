@@ -15,6 +15,7 @@ module.exports = function(environment) {
     messagingSenderId: "435157424273"
     },
 
+
     // if using ember-cli-content-security-policy
     contentSecurityPolicy: {
       'script-src': "'self' 'unsafe-eval' apis.google.com",
@@ -59,7 +60,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV['ember-faker'] = {
+        enabled: true
+      };
   }
 
   return ENV;
